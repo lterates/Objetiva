@@ -44,7 +44,7 @@
             android:paddingLeft="20dp"
             android:singleLine="true"/>
 
-        //FORGOT?
+        //NUMBER ITEMS FOUND
         <TextView
             android:id="@+id/forgot_password"
             android:layout_centerHorizontal="true"

@@ -73,22 +73,4 @@
             app:chipIconTint="@color/background"/>
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/parseBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parse"
-        android:onClick="jsonParse"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
-        android:layout_marginHorizontal="160dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:id="@+id/responseTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="8sp"
-        android:textAlignment="center"/>
-
 </LinearLayout>

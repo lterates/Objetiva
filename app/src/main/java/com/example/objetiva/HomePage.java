@@ -28,7 +28,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 
-    public class HomePage extends AppCompatActivity {
+public class HomePage extends AppCompatActivity {
     private RequestQueue mQueue;
     Fragment selectedFragment = null;
     @Override
@@ -41,32 +41,10 @@ import org.json.JSONArray;
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
         Button seePricingBtn = findViewById(R.id.seePricingBtn);
-        Button parseBtn = findViewById(R.id.parseBtn);
         EditText searchBar = findViewById(R.id.search_bar);
 
         mQueue = Volley.newRequestQueue(this);
     }
-
-
-    public void jsonParse(View view){
-        TextView responseTxt = findViewById(R.id.responseTxt);
-        String url = "https://trabalhos.esmad.ipp.pt/tsiw/20-21/nes/wp_group06/wp-json/wc/v3/products?consumer_key=ck_c9a44480dab7f33199745d06604ae5f8049b3729&consumer_secret=cs_4c1a6a42e1422af263dfd4177e8f8cb464b8eb9f";
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        Log.d("Response:", response.toString());
-                        responseTxt.setText(response.toString());
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d("Error", error.getMessage());
-            }
-        });
-        mQueue.add(request);
-    }
-
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
@@ -102,6 +80,30 @@ import org.json.JSONArray;
 
     public void openProduct(View view) {
         Intent intent = new Intent(this, ProductPage.class);
+        startActivity(intent);
+    }
+
+    public void cameraSearch(View view) {
+        Intent intent = new Intent (this, SearchPage.class);
+        intent.putExtra("categoryCode", 18);
+        startActivity(intent);
+    }
+
+    public void lensSearch(View view) {
+        Intent intent = new Intent (this, SearchPage.class);
+        intent.putExtra("categoryCode", 19);
+        startActivity(intent);
+    }
+
+    public void filmSearch(View view) {
+        Intent intent = new Intent (this, SearchPage.class);
+        intent.putExtra("categoryCode", 21);
+        startActivity(intent);
+    }
+
+    public void acessoriesSearch(View view) {
+        Intent intent = new Intent (this, SearchPage.class);
+        intent.putExtra("categoryCode", 20);
         startActivity(intent);
     }
 }
