@@ -88,7 +88,7 @@
             app:cardBackgroundColor="@color/yellow"
             android:layout_marginTop="120dp"
             app:cardCornerRadius="16dp"
-            android:layout_marginLeft="125dp"
+            android:layout_centerHorizontal="true"
             android:clickable="true"
             android:onClick="lensSearch">
 
@@ -122,7 +122,7 @@
             app:cardBackgroundColor="@color/red"
             android:layout_marginTop="120dp"
             app:cardCornerRadius="16dp"
-            android:layout_marginLeft="250dp"
+            android:layout_alignParentEnd="true"
             android:clickable="true"
             android:onClick="filmSearch">
 
@@ -222,7 +222,7 @@
             app:cardBackgroundColor="@color/background"
             app:cardCornerRadius="12dp"
             android:onClick="openProduct"
-            android:layout_marginLeft="200dp"
+            android:layout_alignParentEnd="true"
             app:strokeColor="@color/yellow"
             app:strokeWidth="2dp">
 
@@ -346,7 +346,7 @@
             android:layout_width="140dp"
             android:layout_height="150dp"
             android:layout_marginTop="440dp"
-            android:layout_marginLeft="200dp"
+            android:layout_alignParentEnd="true"
             android:clickable="true"
             app:cardBackgroundColor="@color/background"
             app:cardCornerRadius="12dp"

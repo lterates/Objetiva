@@ -73,7 +73,6 @@ public class SearchPage extends AppCompatActivity {
     }
 
     public void jsonParse(){
-        Toast.makeText(this, categoryCode, Toast.LENGTH_SHORT).show();
         String searchFor = searchBox.getText().toString();
         if (categoryCode != null) {
             url = "https://trabalhos.esmad.ipp.pt/tsiw/20-21/nes/wp_group06/wp-json/wc/v3/products?category="+ categoryCode +"&consumer_key=ck_c9a44480dab7f33199745d06604ae5f8049b3729&consumer_secret=cs_4c1a6a42e1422af263dfd4177e8f8cb464b8eb9f";
@@ -83,12 +82,11 @@ public class SearchPage extends AppCompatActivity {
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                Log.d("Response:", response.toString());
+                Log.d("Request: ", url);
                 numItemsTxt.setText(response.length() + " items encontrados");
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject titleResponse = response.getJSONObject(i);
-                        Log.d("Request: ", url);
                         Log.d("Items: ", titleResponse.getString("name"));
                     } catch (JSONException e) {
                         e.printStackTrace();
