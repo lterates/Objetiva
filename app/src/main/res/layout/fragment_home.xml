@@ -28,20 +28,22 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:src="@drawable/logo"
-            android:layout_alignEnd="@id/searchBar"/>
+            android:layout_alignEnd="@id/search_bar"/>
 
         //PESQUISA
+
         <EditText
-            android:id="@+id/searchBar"
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/rounded_corners"
+            android:drawableEnd="@drawable/ic_search"
             android:fontFamily="@font/nunitoregular"
             android:hint="Pesquisar"
-            android:drawableEnd="@drawable/ic_search"
-            android:paddingRight="10dp"
+            android:onClick="openSearch"
             android:paddingLeft="20dp"
+            android:paddingRight="10dp"
             android:singleLine="true"/>
 
         //FILTROS
