@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="35dp">
+
+        //TITULO
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destaques"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitobold"
+            android:textSize="26sp"/>
+
+        //LOGO
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_alignEnd="@id/searchBar"/>
+
+        //PESQUISA
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/nunitoregular"
+            android:hint="Pesquisar"
+            android:drawableEnd="@drawable/ic_search"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:singleLine="true"/>
+
+        //FILTROS
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CamerasFilter"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTint="@color/green"
+            android:layout_marginTop="120dp"
+            app:cardCornerRadius="16dp"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/ic_camera" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:textColor="@color/white"
+                    android:text="Câmaras"
+                    android:textSize="14sp"
+                    android:padding="10dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/LensesFilter"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="@color/yellow"
+            android:layout_marginTop="120dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginLeft="125dp"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/ic_lens" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:textColor="@color/white"
+                    android:text="Objetivas"
+                    android:textSize="14sp"
+                    android:padding="10dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/FilmFilter"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="@color/red"
+            android:layout_marginTop="120dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginLeft="250dp"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/ic_film" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:textColor="@color/white"
+                    android:text="Película"
+                    android:textSize="14sp"
+                    android:padding="10dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        //PRODUTOS
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Card1"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="260dp"
+            android:clickable="true"
+            android:onClick="openProduct"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="@color/green"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/hasselblad_501c"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="Hasselblad 501C"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="1450€"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="14dp"
+                        android:text="4.8"
+                        android:drawableStart="@drawable/ic_star"
+                        android:drawableTint="@color/yellow"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Card2"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="260dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="12dp"
+            android:onClick="openProduct"
+            android:layout_marginLeft="200dp"
+            app:strokeColor="@color/yellow"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/fd50_14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="FD 50mm f/1.4 SSC"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="120€"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="4.3"
+                        android:drawableStart="@drawable/ic_star"
+                        android:drawableTint="@color/yellow"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Card3"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="440dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="@color/red"
+            android:onClick="openProduct"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ektar100"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="Kodak Ektar 100"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="10€"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="14dp"
+                        android:text="4.5"
+                        android:drawableStart="@drawable/ic_star"
+                        android:drawableTint="@color/yellow"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Card4"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="440dp"
+            android:layout_marginLeft="200dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="@color/blue"
+            android:onClick="openProduct"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/hoyar72"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="Filtro Hoya R72 IR"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="70€"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="14dp"
+                        android:text="3.9"
+                        android:drawableStart="@drawable/ic_star"
+                        android:drawableTint="@color/yellow"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+</LinearLayout>

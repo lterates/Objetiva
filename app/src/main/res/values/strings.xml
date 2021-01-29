@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Objetiva</string>
+    <string name="forgot_passowrd"><u>Esqueceu-se da sua Password?</u></string>
+    <string name="goodie_box_descritption">Com o nosso serviço de subscrição não te tens de preocupar com o teu stock de película. Basta assinares e receberás uma caixinha muito fofa em casa, uma vez por mês, recheada com artigos da nossa loja.</string>
+    <string name="waranty_desc">Compra na nossa loja e recebe 2 anos de garantia!</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque metus, aliquam vitae sodales et, consequat sed dui. </string>
+</resources>

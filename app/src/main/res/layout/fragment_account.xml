@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="35dp">
+
+        //LOGO
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/logo"/>
+
+        //TITULO
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitobold"
+            android:textSize="26sp"/>
+
+        //EMAIL
+        <EditText
+            android:id="@+id/emailBar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/nunitoregular"
+            android:hint="Nome ou Email"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:layout_marginHorizontal="25dp"
+            android:singleLine="true"/>
+
+        //PASWORD
+        <EditText
+            android:id="@+id/passBar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginHorizontal="25dp"
+            android:fontFamily="@font/nunitoregular"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:singleLine="true"/>
+
+        //FORGOT?
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="380dp"
+            android:text="@string/forgot_passowrd"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitobold"
+            android:textSize="14sp"/>
+
+        //LOGIN BOTÃO
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="420dp"
+            android:fontFamily="@font/nunitoblack"
+            android:textColor="@color/background"
+            android:backgroundTint="@color/white"
+            android:onClick="setLogged"
+            android:text="Login"
+            app:cornerRadius="50dp"/>
+
+        //CTA
+        <TextView
+            android:id="@+id/text_simple"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:text="Ainda não tem conta?"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitobold"
+            android:textSize="14sp"/>
+
+        //REGISTAR BOTÃO
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registar"
+            android:fontFamily="@font/nunitoblack"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="530dp"
+            android:textColor="@color/background"
+            app:cornerRadius="50dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

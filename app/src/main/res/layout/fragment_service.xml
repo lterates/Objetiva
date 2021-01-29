@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="35dp">
+
+        //TITULO
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goodie-Box"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitobold"
+            android:textSize="26sp"/>
+
+        //LOGO
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_alignParentEnd="true"/>
+
+        //IMAGEM
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/goodie_persona"
+            android:layout_marginTop="80dp"/>
+
+
+        //DESCRIÇÃO
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goodie_box_descritption"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitoregular"
+            android:textSize="16sp"
+            android:layout_marginTop="320dp"
+            android:layout_centerHorizontal="true"/>
+
+        //BOTÃO
+
+        <Button
+            android:id="@+id/seePricingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="470dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/nunitoblack"
+            android:text="Ver os Preços"
+            android:onClick="seePricing"
+            android:textColor="@color/background"
+            app:cornerRadius="50dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="30dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

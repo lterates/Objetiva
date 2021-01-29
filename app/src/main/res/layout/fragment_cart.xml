@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="35dp">
+
+        //TITULO
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrinho"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitobold"
+            android:textSize="26sp"/>
+
+        //LOGO
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_alignEnd="@id/searchBar"/>
+
+        //PESQUISA
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/nunitoregular"
+            android:hint="Pesquisar"
+            android:drawableEnd="@drawable/ic_search"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:singleLine="true"/>
+
+        //CHIPS
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sort_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Sort"
+            app:chipIcon="@drawable/ic_sort"
+            app:chipIconTint="@color/background"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/list_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:text="List"
+            app:chipIcon="@drawable/ic_grid"
+            app:chipIconTint="@color/background"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="100dp"
+            android:text="Filter"
+            app:chipIcon="@drawable/ic_filter"
+            app:chipIconTint="@color/background"/>
+    </RelativeLayout>
+
+</LinearLayout>
