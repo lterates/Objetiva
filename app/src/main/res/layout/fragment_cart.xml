@@ -52,12 +52,14 @@
             android:layout_marginTop="100dp"
             android:text="Sort"
             app:chipIcon="@drawable/ic_sort"
+            app:chipBackgroundColor="@color/white"
             app:chipIconTint="@color/background"/>
         <com.google.android.material.chip.Chip
             android:id="@+id/list_chip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
+            app:chipBackgroundColor="@color/white"
             android:layout_centerHorizontal="true"
             android:text="List"
             app:chipIcon="@drawable/ic_grid"
@@ -67,10 +69,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            app:chipBackgroundColor="@color/white"
             android:layout_marginTop="100dp"
             android:text="Filter"
             app:chipIcon="@drawable/ic_filter"
             app:chipIconTint="@color/background"/>
+
+        //NUMBER ITEMS FOUND
+        <TextView
+            android:id="@+id/numItemsTxt"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="0 items encontrados"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitoregular"
+            android:textSize="16sp"/>
     </RelativeLayout>
 
 </LinearLayout>

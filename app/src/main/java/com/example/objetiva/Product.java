@@ -28,4 +28,14 @@ public class Product {
     public String getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", ImageUrl='" + ImageUrl + '\'' +
+                ", description='" + description + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
 }

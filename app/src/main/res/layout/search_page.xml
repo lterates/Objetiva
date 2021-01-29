@@ -36,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:layout_marginTop="50dp"
+            android:textColorHint="@color/background"
             android:background="@drawable/rounded_corners"
             android:fontFamily="@font/nunitoregular"
             android:hint="Pesquisar"

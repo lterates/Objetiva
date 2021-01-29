@@ -31,7 +31,6 @@
             android:layout_alignEnd="@id/search_bar"/>
 
         //PESQUISA
-
         <EditText
             android:id="@+id/search_bar"
             android:layout_width="match_parent"
@@ -40,6 +39,7 @@
             android:background="@drawable/rounded_corners"
             android:drawableEnd="@drawable/ic_search"
             android:fontFamily="@font/nunitoregular"
+            android:textColorHint="@color/background"
             android:hint="Pesquisar"
             android:focusable="false"
             android:onClick="openSearch"
