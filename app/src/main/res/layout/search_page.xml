@@ -17,7 +17,7 @@
             android:id="@+id/pageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Carrinho"
+            android:text="Pesquisa"
             android:textColor="@color/white"
             android:fontFamily="@font/nunitobold"
             android:textSize="26sp"/>
@@ -44,51 +44,18 @@
             android:paddingLeft="20dp"
             android:singleLine="true"/>
 
-        //CHIPS
-        <com.google.android.material.chip.Chip
-            android:id="@+id/sort_chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:text="Sort"
-            app:chipIcon="@drawable/ic_sort"
-            app:chipIconTint="@color/background"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/list_chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+        //FORGOT?
+        <TextView
+            android:id="@+id/forgot_password"
             android:layout_centerHorizontal="true"
-            android:text="List"
-            app:chipIcon="@drawable/ic_grid"
-            app:chipIconTint="@color/background"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/filter_chip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_marginTop="100dp"
-            android:text="Filter"
-            app:chipIcon="@drawable/ic_filter"
-            app:chipIconTint="@color/background"/>
+            android:text="0 items encontrados"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunitoregular"
+            android:textSize="16sp"/>
+
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/parseBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parse"
-        android:onClick="jsonParse"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
-        android:layout_marginHorizontal="160dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:id="@+id/responseTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="8sp"
-        android:textAlignment="center"/>
 
 </LinearLayout>
