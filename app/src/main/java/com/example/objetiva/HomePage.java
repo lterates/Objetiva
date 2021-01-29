@@ -85,25 +85,25 @@ public class HomePage extends AppCompatActivity {
 
     public void cameraSearch(View view) {
         Intent intent = new Intent (this, SearchPage.class);
-        intent.putExtra("categoryCode", 18);
+        intent.putExtra("categoryCode", "18");
         startActivity(intent);
     }
 
     public void lensSearch(View view) {
         Intent intent = new Intent (this, SearchPage.class);
-        intent.putExtra("categoryCode", 19);
+        intent.putExtra("categoryCode", "19");
         startActivity(intent);
     }
 
     public void filmSearch(View view) {
         Intent intent = new Intent (this, SearchPage.class);
-        intent.putExtra("categoryCode", 21);
+        intent.putExtra("categoryCode", "21");
         startActivity(intent);
     }
 
     public void acessoriesSearch(View view) {
         Intent intent = new Intent (this, SearchPage.class);
-        intent.putExtra("categoryCode", 20);
+        intent.putExtra("categoryCode", "20");
         startActivity(intent);
     }
 }

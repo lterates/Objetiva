@@ -1,6 +1,7 @@
 package com.example.objetiva;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,12 +22,17 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class SearchPage extends AppCompatActivity {
     private EditText searchBox;
     private RequestQueue mQueue;
     private String categoryCode = null;
     private String url;
+    private RecyclerView recyclerView;
+    private TextView numItemsTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,7 @@ public class SearchPage extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         if (extras != null) {
             categoryCode = extras.getString("categoryCode");
+            jsonParse();
         }
 
         searchBox.addTextChangedListener(new TextWatcher() {
@@ -54,17 +61,19 @@ public class SearchPage extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Toast.makeText(SearchPage.this, "After", Toast.LENGTH_SHORT).show();
-
+                jsonParse();
             }
         });
     }
 
     private void initViews() {
         searchBox = findViewById(R.id.searchBox);
+        recyclerView = findViewById(R.id.recyclerView);
+        numItemsTxt = findViewById(R.id.numItemsTxt);
     }
 
-    public void jsonParse(View view){
+    public void jsonParse(){
+        Toast.makeText(this, categoryCode, Toast.LENGTH_SHORT).show();
         String searchFor = searchBox.getText().toString();
         if (categoryCode != null) {
             url = "https://trabalhos.esmad.ipp.pt/tsiw/20-21/nes/wp_group06/wp-json/wc/v3/products?category="+ categoryCode +"&consumer_key=ck_c9a44480dab7f33199745d06604ae5f8049b3729&consumer_secret=cs_4c1a6a42e1422af263dfd4177e8f8cb464b8eb9f";
@@ -75,6 +84,16 @@ public class SearchPage extends AppCompatActivity {
             @Override
             public void onResponse(JSONArray response) {
                 Log.d("Response:", response.toString());
+                numItemsTxt.setText(response.length() + " items encontrados");
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+                        JSONObject titleResponse = response.getJSONObject(i);
+                        Log.d("Request: ", url);
+                        Log.d("Items: ", titleResponse.getString("name"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }, new Response.ErrorListener() {
             @Override

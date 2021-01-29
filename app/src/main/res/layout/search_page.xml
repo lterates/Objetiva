@@ -46,7 +46,7 @@
 
         //NUMBER ITEMS FOUND
         <TextView
-            android:id="@+id/forgot_password"
+            android:id="@+id/numItemsTxt"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,6 +55,16 @@
             android:textColor="@color/white"
             android:fontFamily="@font/nunitoregular"
             android:textSize="16sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp">
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
 
     </RelativeLayout>
 
